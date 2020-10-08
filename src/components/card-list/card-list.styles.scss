@@ -5,4 +5,7 @@
     grid-row-gap: var(--spacing-l);
     max-width: var(--width-container);
     width:100%;
+    transform: translateX(30px);
+    animation: slideIn .8s ease forwards .1s;
+    opacity:0;
 }
