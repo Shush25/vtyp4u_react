@@ -14,9 +14,10 @@ export const Card= props =>(
                     <img className='imgsty'
                         alt={props.member.name}
                         src={props.member.imageUrl}
+                        data-aos="custom-slideIn" data-aos-duration="1100"
                     />
-                    <h2 className="front_text-header">{props.member.name}</h2>
-                    <p>{props.member.Job}</p>
+                    <h2 className="front_text-header" data-aos="custom-slideUp" data-aos-duration="1800">{props.member.name}</h2>
+                    <p className="front_text_para" data-aos="custom-slideUp" data-aos-duration="2300">{props.member.Job}</p>
                 </div>
             </div>
             <div className="back">

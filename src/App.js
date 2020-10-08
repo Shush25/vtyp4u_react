@@ -1,11 +1,13 @@
 import React from 'react';
 import {Route, Switch } from 'react-router-dom';
-import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './App.scss';
 
 import HomePage from './pages/homepage/homepage.component';
 import AboutPage from './pages/aboutpage/aboutpage.component';
 import Header from './components/header/header.component';
-
+AOS.init({easing:"ease-in-out",});
 function App(){
   return(
     <div>

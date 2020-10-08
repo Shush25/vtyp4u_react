@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 import './header.styles.scss';
 
 const Header = () =>(
-    <div className='header'>
+    <div className='header' data-aos="custom-slideDown" data-aos-duration="900">
         <Link className='logo-container' to="/">
             <Logo className='logo'/>
         </Link>

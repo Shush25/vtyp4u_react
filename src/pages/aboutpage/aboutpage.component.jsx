@@ -13,7 +13,9 @@ class Aboutpage extends React.Component{
         const {team} = this.state;
         return(
             <div className='aboutpage'>
-                <div>About Page</div>
+                <div data-aos="zoom-in-up" data-aos-duration="300">
+                    About Page
+                </div>
                 <CardList team={team}/>
             </div>
         )
