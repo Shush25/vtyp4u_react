@@ -22,7 +22,7 @@ const team_members =[
     {
         id: 3,
         name: 'Tanmay Mahajan',
-        Job: 'HTML,CSS Designeer',
+        Job: 'HTML,CSS Designer',
         github: '',
         linkdin: 'https://www.linkedin.com/in/tanmay-mahajan-6ba24b176/',
         insta: '',
