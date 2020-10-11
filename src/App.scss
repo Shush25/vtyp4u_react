@@ -2,7 +2,7 @@ img{
     margin-bottom:20px;
     overflow: hidden;
     height: auto;
-    transform: translateX(300px);
+    transform: translateX(30px);
 }
 h1,h2,h3,p{
     margin-bottom:20px;
@@ -31,7 +31,7 @@ h1,h2,h3,p{
     transition-property: transform,opacity;
 
     &.aos-animate{
-      transform: translateX(300px) scale(.2);
+      transform: translateX(30px) scale(.2);
       opacity:0;
     }
     &.aos-animate{

@@ -7,7 +7,7 @@ import './App.scss';
 import HomePage from './pages/homepage/homepage.component';
 import AboutPage from './pages/aboutpage/aboutpage.component';
 import Menu from './components/menu/menu.component';
-AOS.init({easing:"ease-in-out",});
+AOS.init({easing:"ease-in-out",once:true,});
 function App(){
   return(
     <div>
