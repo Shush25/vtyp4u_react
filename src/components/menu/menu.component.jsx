@@ -1,12 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import { auth } from '../../firebase/firebase.utils';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
+
 
 import './menu.styles.scss';
 
-const Menu = () =>(
-    <div className='header1' data-aos="custom-slideDown" data-aos-duration="900">
+const Menu = ({currentUser}) =>(
+    <div className={`header1`} data-aos="custom-slideDown" data-aos-duration="900">
         <Link className='logo-container' to="/">
             <Logo className='logo'/>
         </Link>
@@ -24,14 +26,21 @@ const Menu = () =>(
                 </li>
                 <li>
                     <Link className='options' to='/'>
-                        LOGIN
+                        REQUESTS
                     </Link>
                 </li>
-                <li>
-                    <Link className='options' to='/'>
-                        TYPER
-                    </Link>
-                </li>
+                {
+                    currentUser ?
+                    <li>
+                        <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
+                    </li>
+                    :
+                    <li>
+                        <Link className='option' to='/signin'>
+                            SIGN IN
+                        </Link>
+                    </li>
+                }
             </ul>
         </nav>
     </div>
