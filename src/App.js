@@ -6,6 +6,7 @@ import './App.scss';
 
 import HomePage from './pages/homepage/homepage.component';
 import AboutPage from './pages/aboutpage/aboutpage.component';
+import RequestPage from './pages/requestpage/requestpage.component';
 import Menu from './components/menu/menu.component';
 import Footer from './components/footer/footer.component';
 import Profile from './pages/profile/profile.component';
