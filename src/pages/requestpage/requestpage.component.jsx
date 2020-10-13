@@ -3,7 +3,7 @@ import './requestpage.styles.css';
 import user_members from './requestpage.data.js';
 import { CardrList } from '../../components/card-list/reqcard-list.component';
 import { Header } from '../../components/header/header.component';
-import Header_image from '../../assets/about.jpg';
+import Header_image from '../../assets/type.jpg';
 
 class Requestpage extends React.Component{
     constructor(){
@@ -21,7 +21,6 @@ class Requestpage extends React.Component{
                         Request Page
                     </div>
                 </Header>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <CardrList team={team}/>
             </div>
         )
