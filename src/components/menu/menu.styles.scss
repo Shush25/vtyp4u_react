@@ -36,13 +36,50 @@
     transition: background-position-x 0.9s linear;
     text-align: center;
     
-    .option,a{
+
+    .dropdown{
+        position: relative;
+
+        display: inline-block;
+
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            z-index:1;
+
+        }
+        &:hover{
+            display:block;
+            background-color: rgba(255, 255, 255, 0.762);
+            .options{
+                color:#d94f5c;
+            }
+            .dropdown-content{
+                display:block;
+
+                .options{
+                    padding:10px;
+                    margin-bottom: 15px;
+                    margin-top:20px;
+                    color: grey;
+                    &:hover{
+                        color:#d94f5c;
+                    }
+                }
+            }
+        }
+    }
+
+    .options,a{
         font-size: 22px;
         color: white;
         text-decoration: none;
         transition: all 0.45s;
         cursor: pointer;
+        height: 40px;
         font-family: 'Comic Sans MS',cursive,sans-serif;
+        overflow: hidden;
+        
         
     }
 

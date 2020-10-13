@@ -4,9 +4,7 @@ import './profile.styles.scss';
 
 const Profile=()=>(
     <div className="profile">
-    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        This is profile and gibberish lol lol olol
-        <br></br>
+        <h1 align="center">Profile</h1>
     </div>
 );
 export default Profile;
