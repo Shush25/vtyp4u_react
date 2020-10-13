@@ -25,7 +25,7 @@ const Menu = ({currentUser}) =>(
                     </Link>
                 </li>
                 <li>
-                    <Link className='options' to='/'>
+                    <Link className='options' to='/request'>
                         REQUESTS
                     </Link>
                 </li>
