@@ -56,6 +56,7 @@ class App extends React.Component{
           <Route exact path='/about' component={AboutPage}/>
           <Route path='/signin' component={SignInAndSignUpPage} />
           <Route path='/profile' component={Profile} />
+          <Route exact path='/request' component={RequestPage}/>
         </Switch>
         <Footer/>
       </div>
