@@ -33,7 +33,7 @@ const Menu = ({currentUser}) =>(
                     currentUser ?
                     <li>
                         <div className="dropdown">
-                            <div class="options">{currentUser.displayName},</div>
+                            <div class="options">{currentUser.displayName}</div>
                             <div class="dropdown-content">
                                 <div className='options' onClick={() => auth.signOut()}>SIGNOUT</div>
                                 <Link className='options' to='/profile'>PROFILE</Link>
