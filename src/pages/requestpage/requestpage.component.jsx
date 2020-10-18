@@ -21,7 +21,7 @@ class Requestpage extends React.Component{
                         Request Page
                     </div>
                 </Header>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br>
                 <CardrList team={team}/>
             </div>
         )
