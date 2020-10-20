@@ -1,17 +1,36 @@
 import React from 'react';
 
+import { Icon } from '@iconify/react';
+import coinsLine from '@iconify/icons-ri/coins-line';
+
 import './reqcard.styles.css';
 
-export const Cardr = props =>(
-    <div>
-        <div className="header">
-            <h1 className="header__title">Request</h1>
+export const Cardr = props =>( 
+    <div className = "card-container1">
+        <div className="row1">
+            <div className="name">
+                <p><b> {props.member.name} </b></p>
+            </div>
+            <div className="column2" align="right">
+                    <button value="Take Task" className="btn"><b>Take Task</b></button>   
+            </div>           
         </div>
-    <div className = "card-container">
-            <h2><b> {props.member.name} </b></h2>
-            <p><b>Deadline:</b> {props.member.deadline} </p>
-            <p><b>Coins:</b> {props.member.coins} </p>
-            <p> {props.member.note} </p>
+        <div className="row2">
+            <div className="author">
+                <p> {props.member.author} </p>
+            </div>
+            <div className="deadline">
+                <p><b>Deadline:</b> {props.member.deadline} </p>
+            </div>
+            <div className="coins">
+                <p>
+                    <b>Coins:</b> {props.member.coins}   <Icon icon={coinsLine} color="gold" width="30px" height="25px" />
+                </p>
+            </div>
+            <div className="note">
+                <p> {props.member.note} </p>  
+            </div>     
+        </div>
+
     </div>
-</div>
 )
