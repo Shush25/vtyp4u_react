@@ -3,7 +3,7 @@ import './requestpage.styles.scss';
 import user_members from './requestpage.data.js';
 import { CardrList } from '../../components/card-list/reqcard-list.component';
 import { Header } from '../../components/header/header.component';
-import Header_image from '../../assets/about.jpg';
+import Header_image from '../../assets/type.jpg';
 import {Link} from 'react-router-dom';
 
 class Requestpage extends React.Component{

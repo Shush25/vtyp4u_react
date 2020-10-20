@@ -1,6 +1,6 @@
 .hero-header-container {
     background-size: cover; 
-    height: 100vh; 
+    height: 90vh; 
     position: relative; 
 
     &:before{
@@ -14,7 +14,7 @@
     }
 }
 .hero-text {
-    text-align: center;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;

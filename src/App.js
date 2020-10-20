@@ -44,7 +44,6 @@ class App extends React.Component{
       }
     });
   }
-
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
@@ -64,5 +63,4 @@ class App extends React.Component{
     );
   }
 }
-
 export default App;

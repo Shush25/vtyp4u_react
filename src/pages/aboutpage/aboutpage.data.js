@@ -2,7 +2,7 @@ const team_members =[
     {
         id: 1,
         name:'Shushant Kumar Singh',
-        Job:'React Developer',
+        Job:'React Developer,Designer',
         email: 'mailto:shushantkumar.singh2019@vitstudent.ac.in',
         github: 'https://github.com/Shush25',
         linkdin: 'https://www.linkedin.com/in/shushant-kumar-singh-bb016b1b6/',
@@ -12,7 +12,7 @@ const team_members =[
     {
         id: 2,
         name: 'Apoorv Yadav',
-        Job: 'Front-End Developer',
+        Job: 'HTML,CSS,React Developer',
         email: 'mailto:apoorv.yadav2019@vitstudent.ac.in',
         github: 'https://github.com/Apoorv-17',
         linkdin: 'https://www.linkedin.com/in/apoorv-yadav-1a54571b7/',
@@ -22,7 +22,7 @@ const team_members =[
     {
         id: 3,
         name: 'Tanmay Mahajan',
-        Job: 'HTML,CSS Designer',
+        Job: 'HTML,CSS',
         github: '',
         linkdin: 'https://www.linkedin.com/in/tanmay-mahajan-6ba24b176/',
         insta: '',
