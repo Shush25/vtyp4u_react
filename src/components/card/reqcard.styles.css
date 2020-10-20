@@ -1,35 +1,55 @@
 .card-container1{
-	background-color: #95dada;
-	border: 1px solid grey;
-	border-radius: 5px;
+	position: relative;
+	background-color: #eeeeee;
+	border: 1px solid black;
+	border-radius: 15px;
 	padding: 25px;
 	padding-top: 0;
-	transform: translateZ(0);
-	transition: transform 0.25s ease-out;
-  }
-  
-  .card-container1:hover {
-	transform: scale(1.02);
+	line-height: normal;
 	box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1) inset;
   }
-
+  
   .row1{
 	  display: flex;
   }
+
+  .row2{
+	  margin-top: -20px;
+  }
+
+  .name{
+	  margin-top: -35px;
+	  font-size: 30px;
+  }
+
+  .author{
+	  margin-top: -40px;
+  }
+
   .column2{
 	flex: auto;
-	margin-top: 20px;
-	margin-right: 50px;
+	margin-top: 15px;
   }
   .btn{
-	  background-color: lightyellow;
+	  background-color: #feda78;
 	  padding: 10px;
-	  border: 1px solid black;
-	  border-radius: 5px;
+	  border-radius: 4px;
+	  border: 2px solid orange;
+	  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+	  cursor: pointer;
   }
 
   .btn:hover{
-	background-color: yellowgreen;
-	transform: scale(1.02);
-	box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+	background-color: black;
+	border: 2px solid black;
+	color: whitesmoke;
+  }
+
+  .deadline{
+	  font-size: 20px;
+  }
+
+  .coins{
+	  font-size: 18px;
+	  margin-top: -15px;
   }
