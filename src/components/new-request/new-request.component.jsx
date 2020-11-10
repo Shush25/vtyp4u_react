@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
+import firebase from '../../firebase/firebase.utils';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import 'firebase/storage';
@@ -21,12 +23,25 @@ class NewRequest extends React.Component {
             email: '',
             deadline: '',
             coins: 0,
-            note: ''
+            note: '',
+            URL: '',
+            files: null
         }
     }
     handleSubmit = async event => {
         event.preventDefault();
-
+        let bucketName = 'documents'
+        let file = this.state.files[0]
+        let storageRef= firebase.storage().ref(`${bucketName}/${file.name}`)
+        let uploadTask = storageRef.put(file)
+        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
+            ()=>{
+                //let downloadURL = uploadTask.snapshot.downloadURL
+            storageRef= firebase.storage().ref()
+            storageRef.child('documents/'+this.state.files[0].name).getDownloadURL().then((url)=>{
+            this.state.URL=url
+            console.log(this.state.URL)
+        
         const {addRequest} = this.props;
 
         addRequest({
@@ -36,7 +51,8 @@ class NewRequest extends React.Component {
             email: this.state.email,
             deadline: this.state.deadline,
             coins: this.state.coins,
-            note: this.state.note
+            note: this.state.note,
+            URL: this.state.URL,
         });
         this.setState({
             id: '',
@@ -47,6 +63,8 @@ class NewRequest extends React.Component {
             coins: 0,
             note: ''
         })
+        })
+        })
     }
     
     handleChange=event =>{
@@ -56,6 +74,11 @@ class NewRequest extends React.Component {
     }
 
 
+    handleUpload=(files)=>{
+        this.setState({
+            files: files
+        })
+    }
 
 
 
@@ -115,8 +138,6 @@ class NewRequest extends React.Component {
                     />
 
                     <input type='file' onChange={(e)=>{this.handleUpload(e.target.files)}} />
-                    <button onClick={this.handleSave}>Save</button>
-
 
                     <CustomButton type='submit' onClick={()=>addRequest(this.state)}> Submit Request </CustomButton>
                 </form>

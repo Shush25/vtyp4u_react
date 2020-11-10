@@ -12,7 +12,7 @@ export const Cardr = props =>(
                 <p><b> {props.member.name} </b></p>
             </div>
             <div className="column2" align="right">
-                    <button value="Take Task" className="btn"><b>Take Task</b></button>   
+                    <button value="Take Task" className="btn" onClick={() => window.open(props.member.URL,"_blank")}><b>Take Task</b></button>   
             </div>           
         </div>
         <div className="row2">
