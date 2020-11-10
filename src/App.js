@@ -13,9 +13,15 @@ import Menu from './components/menu/menu.component';
 import Footer from './components/footer/footer.component';
 import Profile from './pages/profile/profile.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+
 import {auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
+import {createStructuredSelector} from 'reselect';
+import { selectCurrentUser } from './redux/user/user.selector';
+
 AOS.init({easing:"ease-in-out",once:true,});
+
 class App extends React.Component{
     
   unsubscribeFromAuth = null;
@@ -50,6 +56,7 @@ class App extends React.Component{
           <Route path='/signin' render={()=> this.props.currentUser ? (<Redirect to='/'/>):(<SignInAndSignUpPage/>)} />
           <Route path='/profile' component={Profile} />
           <Route exact path='/request' component={RequestPage}/>
+          <Route exact path='/checkout' component = {CheckoutPage} />
         </Switch>
         <Footer/>
       </div>
@@ -57,8 +64,8 @@ class App extends React.Component{
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({

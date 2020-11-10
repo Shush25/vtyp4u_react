@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { auth } from '../../firebase/firebase.utils';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-
+import {selectCurrentUser } from '../../redux/user/user.selector';
 
 import './menu.styles.scss';
 
@@ -34,8 +35,8 @@ const Menu = ({currentUser}) =>(
                     currentUser ?
                     <li>
                         <div className="dropdown">
-                            <div class="options">{currentUser.displayName}</div>
-                            <div class="dropdown-content">
+                            <div className="options">{currentUser.displayName}</div>
+                            <div className="dropdown-content">
                                 <div className='options' onClick={() => auth.signOut()}>SIGNOUT</div>
                                 <Link className='options' to='/profile'>PROFILE</Link>
                             </div>
@@ -53,8 +54,8 @@ const Menu = ({currentUser}) =>(
     </div>
 );
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
-})
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser
+});
 
 export default connect(mapStateToProps)(Menu);
